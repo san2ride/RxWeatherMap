@@ -27,15 +27,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-EV-tZZ">
-                                <rect key="frame" x="156.5" y="470" width="62" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knv-xF-hCW">
                                 <rect key="frame" x="140.5" y="309.5" width="94" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-EV-tZZ">
+                                <rect key="frame" x="156.5" y="470" width="62" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,8 +54,8 @@
                     <navigationItem key="navigationItem" title="Good Weather" id="ajT-kc-tYt"/>
                     <connections>
                         <outlet property="cityNameTextField" destination="ViF-R3-ors" id="8dI-Z7-pnW"/>
-                        <outlet property="humidityLabel" destination="Knv-xF-hCW" id="QC7-lC-uxy"/>
-                        <outlet property="temperatureLabel" destination="CCd-EV-tZZ" id="beB-Mn-oWi"/>
+                        <outlet property="humidityLabel" destination="CCd-EV-tZZ" id="TcP-di-TLV"/>
+                        <outlet property="temperatureLabel" destination="Knv-xF-hCW" id="6ug-to-4pJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E7CEE80657BF295B1C52296 /* Pods_RxWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4446FD470E4DC7D47907AA4 /* Pods_RxWeather.framework */; };
 		AD68D44B22D7CC1C00282B7A /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68D44A22D7CC1C00282B7A /* URLRequest+Extensions.swift */; };
+		AD68D44D22D7D6F300282B7A /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68D44C22D7D6F300282B7A /* URL+Extensions.swift */; };
+		AD68D44F22D7D7C800282B7A /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68D44E22D7D7C800282B7A /* WeatherApi.swift */; };
 		ADA22C3222D7C5D300179C1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA22C3122D7C5D300179C1E /* AppDelegate.swift */; };
 		ADA22C3722D7C5D300179C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA22C3522D7C5D300179C1E /* Main.storyboard */; };
 		ADA22C3922D7C5D600179C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA22C3822D7C5D600179C1E /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		74B11699FF3002F6F42A48D0 /* Pods-RxWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxWeather/Pods-RxWeather.release.xcconfig"; sourceTree = "<group>"; };
 		AD68D44A22D7CC1C00282B7A /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		AD68D44C22D7D6F300282B7A /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		AD68D44E22D7D7C800282B7A /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		ADA22C2E22D7C5D300179C1E /* RxWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA22C3122D7C5D300179C1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA22C3622D7C5D300179C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				AD68D44A22D7CC1C00282B7A /* URLRequest+Extensions.swift */,
+				AD68D44C22D7D6F300282B7A /* URL+Extensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				ADA22C4822D7C99800179C1E /* WeatherResult.swift */,
+				AD68D44E22D7D7C800282B7A /* WeatherApi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,8 +248,10 @@
 			files = (
 				ADA22C4922D7C99800179C1E /* WeatherResult.swift in Sources */,
 				AD68D44B22D7CC1C00282B7A /* URLRequest+Extensions.swift in Sources */,
+				AD68D44D22D7D6F300282B7A /* URL+Extensions.swift in Sources */,
 				ADA22C4622D7C63300179C1E /* WeatherController.swift in Sources */,
 				ADA22C3222D7C5D300179C1E /* AppDelegate.swift in Sources */,
+				AD68D44F22D7D7C800282B7A /* WeatherApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
