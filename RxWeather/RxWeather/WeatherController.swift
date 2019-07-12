@@ -20,9 +20,12 @@ class WeatherController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.cityNameTextField.rx.value
+        
+        self.cityNameTextField.rx.controlEvent(.editingDidEndOnExit)
+        .asObservable()
+            .map { self.cityNameTextField.text }
             .subscribe(onNext: { city in
+                
                 if let city = city {
                     if city.isEmpty {
                         self.displayWeather(nil)
@@ -30,27 +33,25 @@ class WeatherController: UIViewController {
                         self.fetchWeather(by: city)
                     }
                 }
-                
-                
-                
-                
-            }).disposed(by: bag)
-        
+            })
+            .disposed(by: bag)
     }
     
     private func fetchWeather(by city: String) {
         
         guard let cityEncoded =
             city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
-            let url = URL(string: cityEncoded) else {
+            let url = URL.urlForWeatherAPI(city: cityEncoded) else {
                 return
         }
         
         let resource = Resource<WeatherResult>(url: url)
         
         URLRequest.load(resource: resource)
+            .observeOn(MainScheduler.instance)
+            .catchErrorJustReturn(WeatherResult.empty)
             .subscribe(onNext: { result in
-                
+                                
                 let weather = result.main
                 self.displayWeather(weather)
             })
