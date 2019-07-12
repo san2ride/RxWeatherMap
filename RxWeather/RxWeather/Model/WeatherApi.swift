@@ -10,6 +10,6 @@ import Foundation
 
 enum WeatherApi {
     static let baseUrl = "https://api.openweathermap.org/data/2.5/weather?q="
-    static let apiKey = "&APPID=ba0d703a8332b5fa2f3a398e9c401321=imperial"
+    static let apiKey = "&APPID=ba0d703a8332b5fa2f3a398e9c401321"
     //"api.openweathermap.org/data/2.5/weather?q={city name}"
 }

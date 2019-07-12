@@ -47,15 +47,17 @@ class WeatherController: UIViewController {
         
         let resource = Resource<WeatherResult>(url: url)
         
-        URLRequest.load(resource: resource)
+        let search = URLRequest.load(resource: resource)
             .observeOn(MainScheduler.instance)
-            .catchErrorJustReturn(WeatherResult.empty)
-            .subscribe(onNext: { result in
-                                
-                let weather = result.main
-                self.displayWeather(weather)
-            })
-            .disposed(by: bag)
+            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        
+        search.map { "\($0.main.temp) ℉" }
+        .drive(self.temperatureLabel.rx.text)
+        .disposed(by: bag)
+        
+        search.map { "\($0.main.humidity) 💦" }
+        .drive(self.humidityLabel.rx.text)
+        .disposed(by: bag)
     }
     
     private func displayWeather(_ weather: Weather?) {
